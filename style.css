@@ -6,9 +6,21 @@
     padding: 0;
     /*border: 1px solid blue;*/
 }
+body {
+    font-family: "roboto", sans-serif;
+}
 header{
     font-family: "Shrikhand", cursive;
     text-align: center;
-    padding: 0.5rem;
+    padding: .5rem;
     box-shadow: 2px 2px 8px -3px #7e7e7e;
-} 
+    position: relative;
+}
+.city {
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-weight: bold;
+    gap: 10px;
+  } 
