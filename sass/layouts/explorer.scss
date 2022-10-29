@@ -1,0 +1,24 @@
+.explorer {
+    background-color: #fafafa;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    & .explorer_btn {
+      text-decoration: none;
+      color: #ffffff;
+      background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+      background-color: #686868;
+      padding: 15px 30px;
+      border-radius: 25px;
+      box-shadow: 2px 2px 8px -3px #7e7e7e;
+      transition-duration: 0.25s;
+    }
+    & .explorer_btn:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    } 
+}
