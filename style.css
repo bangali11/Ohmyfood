@@ -1,50 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /*border: 1px solid blue;*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*border: 1px solid blue;*/
 }
+
 body {
-    font-family: "roboto", sans-serif;
+  font-family: "roboto", sans-serif;
 }
-header{
-    font-family: "Shrikhand", cursive;
-    text-align: center;
-    padding: 10px;
-    box-shadow: 2px 2px 8px -3px #7e7e7e;
-    position: relative;
+
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 2px 2px 8px -3px #7e7e7e;
+  position: relative;
 }
+
 .city {
-    background-color: #f3f3f3;
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    font-weight: bold;
-    gap: 10px;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  font-weight: bold;
+  gap: 10px;
 }
+
 .explorer {
-    background-color: #fafafa;
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    gap: 15px;
-  }
-  .explorer .explorer_btn {
-    text-decoration: none;
-    color: #ffffff;
-    background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-    background-color: #686868;
-    padding: 15px 30px;
-    border-radius: 25px;
-    box-shadow: 2px 2px 8px -3px #7e7e7e;
-    transition-duration: 0.25s;
-  }
-  .explorer .explorer_btn:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-  } 
+  background-color: #fafafa;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+}
+
+.explorer .explorer_btn {
+  text-decoration: none;
+  color: #ffffff;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-color: #686868;
+  padding: 15px 30px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 8px -3px #7e7e7e;
+  transition-duration: 0.25s;
+}
+
+.explorer .explorer_btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=style.css.map */
