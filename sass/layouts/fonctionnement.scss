@@ -1,0 +1,49 @@
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px 20px 45px 30px;
+    & #conteur{
+        counter-set: conteur-counter;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 15px;
+        text-align: center;
+    }
+        & .etapes{
+            position: relative;
+            background-color: #f6f6f6;
+            padding: 25px 0px;
+            border-radius: 20px;
+            display: flex;
+            gap: 0.5rem;
+            counter-reset: steps;
+            box-shadow: 2px 6px 9px -5px rgba(22, 21, 21, 0.31);
+            width: 325px;
+            justify-content: center;
+            color: #000000;
+            &::before{
+                counter-increment: conteur-counter;
+                content: counter(conteur-counter);
+                position: absolute;
+                left: -10px;
+                background-color: blueviolet;
+                border-radius: 10px;
+                color: white;
+                height: 20px;
+                width: 20px;
+                text-align: center;
+            }&:hover{
+                background-color: rgba(236, 148, 244, 0.397);
+                & i{
+                    color: blueviolet;
+                }
+            }
+            & i{
+                color: #7e7e7e;
+                position: absolute;
+                left: 35px;
+            }
+        }
+}
