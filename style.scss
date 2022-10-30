@@ -1,8 +1,8 @@
-@use "./sass/utils/mixins.scss";
-@use "./sass/base.scss";
+@use "./sass/base/base.scss";
 @use "./sass/layouts/header.scss";  
 @use "./sass/layouts/city.scss";
 @use "./sass/layouts/explorer.scss";
 @use "./sass/layouts/fonctionnement.scss";
-
+@use "./sass/layouts/menu.scss";
+@use "./sass/utils/variables.scss";
 
