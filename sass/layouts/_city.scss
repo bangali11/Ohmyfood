@@ -1,5 +1,6 @@
+@use "../utils/variables.scss";
 .city {
-    background-color: #f3f3f3;
+    background-color:variables.$Gris;
     display: flex;
     justify-content: center;
     padding: 15px;
