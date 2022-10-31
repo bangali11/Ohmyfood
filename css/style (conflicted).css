@@ -157,17 +157,13 @@ header {
   object-fit: cover;
 }
 #menu #menu__card a .card .card__img .nouveau {
-  position: absolute;
-  width: 90px;
-  height: 30px;
+  position: relative;
+  width: 15%;
+  height: 5%;
   background-color: #99E2D0;
   z-index: 1;
-  right: 20px;
-  top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: green;
+  right: 10px;
+  top: 10px;
 }
 #menu #menu__card a .card .card__desc {
   background-color: #ffffff;
