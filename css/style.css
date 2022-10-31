@@ -11,16 +11,16 @@ body {
   font-family: "roboto", sans-serif;
 }
 
+/*COLORS*/
+/*VARIABLES*/
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
   padding: 10px;
-  box-shadow: 2px 2px 8px -3px #7e7e7e;
+  box-shadow: 2px 6px 9px -5px rgba(22, 21, 21, 0.31);
   position: relative;
-  /*background-color: variables.$color-red;*/
 }
 
-/*COLORS*/
 .city {
   background-color: #f3f3f3;
   display: flex;
@@ -38,7 +38,7 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  gap: 15px;
+  gap: 20px;
 }
 .explorer .explorer_btn {
   text-decoration: none;
@@ -46,8 +46,9 @@ header {
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   padding: 15px 30px;
   border-radius: 25px;
-  box-shadow: 2px 2px 8px -3px #7e7e7e;
+  box-shadow: 2px 6px 9px -5px rgba(22, 21, 21, 0.31);
   transition-duration: 0.25s;
+  margin-bottom: 30px;
 }
 .explorer .explorer_btn:hover {
   opacity: 0.9;
@@ -70,7 +71,7 @@ header {
 }
 .fonctionnement .etapes {
   position: relative;
-  background-color: #f6f6f6;
+  background-color: #fafafa;
   padding: 25px 0px;
   border-radius: 20px;
   display: flex;
@@ -89,7 +90,7 @@ header {
   content: counter(conteur-counter);
   position: absolute;
   left: -10px;
-  background-color: blueviolet;
+  background-color: #9356DC;
   border-radius: 10px;
   color: white;
   height: 20px;
@@ -97,19 +98,20 @@ header {
   text-align: center;
 }
 .fonctionnement .etapes:hover {
-  background-color: rgba(236, 148, 244, 0.397);
+  background-color: rgba(147, 86, 220, 0.1098039216);
 }
 .fonctionnement .etapes:hover i {
-  color: blueviolet;
+  color: #9356DC;
 }
 .fonctionnement .etapes i {
-  color: #7e7e7e;
+  color: #000000;
+  opacity: 0.5;
   position: absolute;
   left: 35px;
 }
 
 #menu {
-  background-color: #f3f3f3;
+  background-color: #fafafa;
   width: 100%;
   padding: 50px 15px;
   display: flex;
@@ -192,19 +194,21 @@ header {
 
 footer {
   padding: 20px 20px;
-  background-color: #353535;
   display: flex;
   flex-direction: column;
   gap: 5px;
   color: #ffffff;
+  opacity: 0.8;
+  background-color: #000000;
 }
 footer h4 {
   margin-bottom: 10px;
   font-family: "Shrikhand", cursive;
 }
-footer span {
+footer a {
   display: flex;
   gap: 10px;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

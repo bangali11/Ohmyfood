@@ -1,8 +1,8 @@
+@use "../utils/variables.scss";
 header{
     font-family: "Shrikhand", cursive;
     text-align: center;
     padding: 10px;
-    box-shadow: 2px 2px 8px -3px #7e7e7e;
+    box-shadow: 2px 6px 9px -5px variables.$Box-shadow_Color;
     position: relative;
-    /*background-color: variables.$color-red;*/
 }

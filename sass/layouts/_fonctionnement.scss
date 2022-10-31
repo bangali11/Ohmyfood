@@ -1,3 +1,4 @@
+@use "../utils/variables.scss";
 .fonctionnement{
     display: flex;
     flex-direction: column;
@@ -13,16 +14,16 @@
     }
         & .etapes{
             position: relative;
-            background-color: #f6f6f6;
+            background-color: variables.$Gris_clair;
             padding: 25px 0px;
             border-radius: 20px;
             display: flex;
             gap: 0.5rem;
             counter-reset: steps;
-            box-shadow: 2px 6px 9px -5px rgba(22, 21, 21, 0.31);
+            box-shadow: 2px 6px 9px -5px variables.$Box-shadow_Color;
             max-width: 390px;
             justify-content: center;
-            color: #000000;
+            color: variables.$Black;
             width: 100%;
             height: 80px;
             align-items: center;
@@ -31,20 +32,21 @@
                 content: counter(conteur-counter);
                 position: absolute;
                 left: -10px;
-                background-color: blueviolet;
+                background-color: variables.$Primaire;
                 border-radius: 10px;
                 color: white;
                 height: 20px;
                 width: 20px;
                 text-align: center;
             }&:hover{
-                background-color: rgba(236, 148, 244, 0.397);
+                background-color: variables.$Primaire_clair;
                 & i{
-                    color: blueviolet;
+                    color: variables.$Primaire;
                 }
             }
             & i{
-                color: #7e7e7e;
+                color: variables.$Black;
+                opacity: .5;
                 position: absolute;
                 left: 35px;
             }

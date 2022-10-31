@@ -7,15 +7,16 @@
     flex-direction: column;
     align-items: center;
     padding: 15px;
-    gap: 15px;
+    gap: 20px;
     & .explorer_btn {
       text-decoration: none;
       color: #ffffff;
       background-image: linear-gradient(0deg, variables.$Primaire, variables.$Secondaire);
       padding: 15px 30px;
       border-radius: 25px;
-      box-shadow: 2px 2px 8px -3px #7e7e7e;
+      box-shadow: 2px 6px 9px -5px variables.$Box-shadow_Color;
       transition-duration: 0.25s;
+      margin-bottom: 30px;
     }
     & .explorer_btn:hover {
       opacity: 0.9;
