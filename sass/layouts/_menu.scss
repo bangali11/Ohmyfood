@@ -1,3 +1,4 @@
+@use "../utils/variables.scss";
 #menu{
     background-color: #f3f3f3;
     width: 100%;
@@ -63,7 +64,14 @@
                             z-index: 1;
                             &:hover{
                                 opacity: 1;
+                                background-image: linear-gradient(0deg, variables.$Primaire, variables.$Secondaire);
+                                /*-webkit-background-clip: text;*/
+                                background-clip: text;
+                                color: transparent;
                                 transform: scale(1.15);
+                                & ~ .fa-regular{
+                                    opacity: 0;
+                                }
                             }
                         }
                     }

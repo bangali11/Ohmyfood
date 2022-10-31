@@ -11,7 +11,7 @@
     & .explorer_btn {
       text-decoration: none;
       color: #ffffff;
-      background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+      background-image: linear-gradient(0deg, variables.$Primaire, variables.$Secondaire);
       padding: 15px 30px;
       border-radius: 25px;
       box-shadow: 2px 2px 8px -3px #7e7e7e;
