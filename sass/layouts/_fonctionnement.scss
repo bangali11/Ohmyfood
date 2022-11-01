@@ -1,5 +1,6 @@
 @use "../utils/colors.scss";
 @use "../utils/variables.scss";
+@use "../utils/mixins.scss";
 .fonctionnement{
     display: flex;
     flex-direction: column;
@@ -21,7 +22,7 @@
             display: flex;
             gap: 0.5rem;
             counter-reset: steps;
-            box-shadow: 2px 6px 9px -5px variables.$Box-shadow_Color;
+            @include mixins.base_box-shadow;
             max-width: 390px;
             justify-content: center;
             color: colors.$Black;

@@ -1,0 +1,18 @@
+@use"./variables.scss";
+@use"./colors.scss";
+
+@mixin base_box-shadow {
+    box-shadow: 2px 6px 9px -5px variables.$Box-shadow_Color;
+}
+
+@mixin base_gradient($deg:0deg,$color1:colors.$Primaire,$color2:colors.$Secondaire) {
+    background-image: linear-gradient($deg, $color1, $color2);
+}
+
+@mixin base_transition-duration($duree:0.25s){
+    transition-duration: $duree;
+}
+
+@mixin base_transform-zoom($zoom:1.05){
+    transform: scale($zoom);
+}

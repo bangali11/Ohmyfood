@@ -1,8 +1,9 @@
 @use "../utils/variables.scss";
+@use "../utils/mixins.scss";
 header{
     font-family: "Shrikhand", cursive;
     text-align: center;
     padding: 10px;
-    box-shadow: 2px 6px 9px -5px variables.$Box-shadow_Color;
+    @include mixins.base_box-shadow;
     position: relative;
 }
