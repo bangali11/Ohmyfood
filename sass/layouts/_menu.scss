@@ -27,18 +27,17 @@
             border-radius: 25px;
             position: relative;
             & .nouveau::before{
-                content: "nouveau";
+                content: "Nouveau";
                 position: absolute;
                 width: 90px;
                 height: 30px;
                 background-color: colors.$Tertiaire;
-                z-index: 1;
                 right: 20px;
                 top: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: darken(colors.$Tertiaire, 50%)
+                color: darken(colors.$Tertiaire, 50%);
+                display: grid;
+                place-items: center;
+                font-weight: 400;
             }
             & .card{
                 width: 100%;
@@ -68,27 +67,17 @@
                     width: 100%;
                     height: 30%;
                     border-radius: 0 0 25px 25px;
-                    & i{
+                    & .fa-regular{
                         position:absolute;
                         right: 30px;
                         transition-duration: 0.25s;
-                        &.fa-regular{
-                            opacity: 1;
-                        }
-                        &.fa-solid{
-                            opacity: 0;
-                            z-index: 1;
-                            &:hover{
-                                opacity: 1;
-                                background-image: linear-gradient(0deg, colors.$Primaire, colors.$Secondaire);
-                                /*-webkit-background-clip: text;*/
-                                background-clip: text;
-                                color: transparent;
-                                transform: scale(1.15);
-                                & ~ .fa-regular{
-                                    opacity: 0;
-                                }
-                            }
+                        &:hover{
+                            background-image: linear-gradient(0deg, colors.$Primaire, colors.$Secondaire);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            transform: scale(1.15);
+                            font-weight: 600;
                         }
                     }
                 }

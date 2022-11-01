@@ -138,18 +138,17 @@ header {
   position: relative;
 }
 #menu__card a .nouveau::before {
-  content: "nouveau";
+  content: "Nouveau";
   position: absolute;
   width: 90px;
   height: 30px;
   background-color: #99E2D0;
-  z-index: 1;
   right: 20px;
   top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #1b6150;
+  display: grid;
+  place-items: center;
+  font-weight: 400;
 }
 #menu__card a .card {
   width: 100%;
@@ -181,28 +180,18 @@ header {
   height: 30%;
   border-radius: 0 0 25px 25px;
 }
-#menu__card a .card__desc i {
+#menu__card a .card__desc .fa-regular {
   position: absolute;
   right: 30px;
   transition-duration: 0.25s;
 }
-#menu__card a .card__desc i.fa-regular {
-  opacity: 1;
-}
-#menu__card a .card__desc i.fa-solid {
-  opacity: 0;
-  z-index: 1;
-}
-#menu__card a .card__desc i.fa-solid:hover {
-  opacity: 1;
+#menu__card a .card__desc .fa-regular:hover {
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
-  /*-webkit-background-clip: text;*/
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   transform: scale(1.15);
-}
-#menu__card a .card__desc i.fa-solid:hover ~ .fa-regular {
-  opacity: 0;
+  font-weight: 600;
 }
 
 footer {
@@ -221,7 +210,7 @@ footer h4 {
 footer a {
   display: flex;
   gap: 10px;
-  color: #ffffff;
+  color: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */
