@@ -1,12 +1,12 @@
-@use"../utils/variables.scss";
+@use"../utils/colors.scss";
 footer{
     padding: 20px 20px;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    color: variables.$White;
+    color: colors.$White;
     opacity: 0.8;
-    background-color: variables.$Black;
+    background-color: colors.$Black;
     & h4{
         margin-bottom: 10px;
         font-family: "Shrikhand", cursive;
@@ -14,7 +14,7 @@ footer{
     & a{
         display: flex;
         gap: 10px;
-        color: variables.$White;
+        color: colors.$White;
     }
 
 }

@@ -1,6 +1,7 @@
+@use "../utils/colors.scss";
 @use "../utils/variables.scss";
 #menu{
-    background-color: variables.$Gris_clair;
+    background-color: colors.$Gris_clair;
     width: 100%;
     padding: 50px 15px;
     display: flex;
@@ -30,14 +31,14 @@
                 position: absolute;
                 width: 90px;
                 height: 30px;
-                background-color: variables.$Tertiaire;
+                background-color: colors.$Tertiaire;
                 z-index: 1;
                 right: 20px;
                 top: 20px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: darken(variables.$Tertiaire, 50%)
+                color: darken(colors.$Tertiaire, 50%)
             }
             & .card{
                 width: 100%;
@@ -56,12 +57,12 @@
                     }
                 }
                 &__desc{
-                    background-color: variables.$White;
+                    background-color: colors.$White;
                     position: relative;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    color: variables.$Black;
+                    color: colors.$Black;
                     gap: 5px;
                     padding: 10px;
                     width: 100%;
@@ -79,7 +80,7 @@
                             z-index: 1;
                             &:hover{
                                 opacity: 1;
-                                background-image: linear-gradient(0deg, variables.$Primaire, variables.$Secondaire);
+                                background-image: linear-gradient(0deg, colors.$Primaire, colors.$Secondaire);
                                 /*-webkit-background-clip: text;*/
                                 background-clip: text;
                                 color: transparent;
