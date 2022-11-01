@@ -40,7 +40,7 @@ header {
   padding: 15px;
   gap: 20px;
 }
-.explorer .explorer_btn {
+.explorer__btn {
   text-decoration: none;
   color: #ffffff;
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
@@ -50,7 +50,7 @@ header {
   transition-duration: 0.25s;
   margin-bottom: 30px;
 }
-.explorer .explorer_btn:hover {
+.explorer__btn:hover {
   opacity: 0.9;
   transform: scale(1.05);
 }
@@ -122,7 +122,7 @@ header {
 #menu h2 {
   width: 100%;
 }
-#menu #menu__card {
+#menu__card {
   width: 100%;
   max-width: 1800px;
   display: flex;
@@ -130,7 +130,7 @@ header {
   justify-content: space-around;
   gap: 20px;
 }
-#menu #menu__card a {
+#menu__card a {
   width: 100%;
   max-width: 605px;
   height: 250px;
@@ -138,25 +138,25 @@ header {
   flex-wrap: wrap;
   border-radius: 25px;
 }
-#menu #menu__card a .card {
+#menu__card a .card {
   width: 100%;
   height: 100%;
   border-radius: 25px;
   box-shadow: 2px 6px 9px -5px rgba(22, 21, 21, 0.31);
 }
-#menu #menu__card a .card .card__img {
+#menu__card a .card__img {
   border-radius: 25px;
   width: 100%;
   height: 70%;
   position: relative;
 }
-#menu #menu__card a .card .card__img img {
+#menu__card a .card__img img {
   border-radius: 25px 25px 0 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#menu #menu__card a .card .card__img .nouveau {
+#menu__card a .card__img .nouveau {
   position: absolute;
   width: 90px;
   height: 30px;
@@ -169,7 +169,7 @@ header {
   align-items: center;
   color: green;
 }
-#menu #menu__card a .card .card__desc {
+#menu__card a .card__desc {
   background-color: #ffffff;
   position: relative;
   display: flex;
@@ -182,19 +182,19 @@ header {
   height: 30%;
   border-radius: 0 0 25px 25px;
 }
-#menu #menu__card a .card .card__desc i {
+#menu__card a .card__desc i {
   position: absolute;
   right: 30px;
   transition-duration: 0.25s;
 }
-#menu #menu__card a .card .card__desc i.fa-regular {
+#menu__card a .card__desc i.fa-regular {
   opacity: 1;
 }
-#menu #menu__card a .card .card__desc i.fa-solid {
+#menu__card a .card__desc i.fa-solid {
   opacity: 0;
   z-index: 1;
 }
-#menu #menu__card a .card .card__desc i.fa-solid:hover {
+#menu__card a .card__desc i.fa-solid:hover {
   opacity: 1;
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   /*-webkit-background-clip: text;*/
@@ -202,7 +202,7 @@ header {
   color: transparent;
   transform: scale(1.15);
 }
-#menu #menu__card a .card .card__desc i.fa-solid:hover ~ .fa-regular {
+#menu__card a .card__desc i.fa-solid:hover ~ .fa-regular {
   opacity: 0;
 }
 

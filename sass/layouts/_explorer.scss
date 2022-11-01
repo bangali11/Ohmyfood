@@ -8,7 +8,7 @@
     align-items: center;
     padding: 15px;
     gap: 20px;
-    & .explorer_btn {
+    &__btn {
       text-decoration: none;
       color: #ffffff;
       background-image: linear-gradient(0deg, variables.$Primaire, variables.$Secondaire);
@@ -18,7 +18,7 @@
       transition-duration: 0.25s;
       margin-bottom: 30px;
     }
-    & .explorer_btn:hover {
+    &__btn:hover {
       opacity: 0.9;
       transform: scale(1.05);
     } 
