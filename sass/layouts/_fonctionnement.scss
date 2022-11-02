@@ -4,13 +4,13 @@
 .fonctionnement{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     padding: 40px 15px 45px 30px;
     & #conteur{
         counter-set: conteur-counter;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
         gap: 15px;
         text-align: center;
     }
@@ -23,7 +23,7 @@
             gap: 0.5rem;
             counter-reset: steps;
             @include mixins.base_box-shadow;
-            max-width: 390px;
+            max-width: 370px;
             justify-content: center;
             color: colors.$Black;
             width: 100%;

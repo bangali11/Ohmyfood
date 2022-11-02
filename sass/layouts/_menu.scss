@@ -14,14 +14,14 @@
     }
     &__card{
         width: 100%;
-        max-width: 1800px;
+        max-width: 2000px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
         gap: 20px;
         & a{
             width: 100%;
-            max-width: 605px;
+            max-width: 450px;
             height: 250px;
             display: flex;
             flex-wrap: wrap;
