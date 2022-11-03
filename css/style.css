@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-* {
+*, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -286,7 +286,7 @@ footer a {
   justify-content: center;
   gap: 0 50px;
 }
-#carte__menu .partie {
+#carte .partie {
   width: 375px;
   display: flex;
   flex-direction: column;
@@ -296,10 +296,10 @@ footer a {
   height: auto;
   min-height: 400px;
 }
-#carte__menu .partie > span {
+#carte .partie > span {
   position: relative;
 }
-#carte__menu .partie > span::before {
+#carte .partie > span::before {
   content: "space";
   position: absolute;
   top: 20px;
@@ -308,7 +308,7 @@ footer a {
   height: 3px;
   color: transparent;
 }
-#carte__menu .partie__choix {
+#carte .partie__choix {
   width: 100%;
   height: 80%;
   display: flex;
@@ -316,7 +316,7 @@ footer a {
   justify-content: center;
   gap: 20px;
 }
-#carte__menu .partie__choix__numero {
+#carte .partie__choix__numero {
   background-color: #ffffff;
   width: 100%;
   height: 25%;
@@ -327,13 +327,97 @@ footer a {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  animation: appearance 1s;
+  animation-fill-mode: both;
 }
-#carte__menu .partie__choix__numero p {
+#carte .partie__choix__numero:nth-child(1) {
+  animation-delay: 0.2s;
+}
+#carte .partie__choix__numero:nth-child(2) {
+  animation-delay: 0.4s;
+}
+#carte .partie__choix__numero:nth-child(3) {
+  animation-delay: 0.6s;
+}
+#carte .partie__choix__numero h4 {
+  width: 100%;
+  height: 50%;
+}
+#carte .partie__choix__numero p {
+  height: 50%;
+  min-width: auto;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  transition-duration: 0.8s;
+  animation-direction: alternate;
 }
-#carte__menu .partie__choix__numero p span {
+#carte .partie__choix__numero p i {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 90%;
+}
+#carte .partie__choix__numero p span {
+  overflow: visible;
   font-weight: bold;
+}
+#carte .partie__choix__numero::before {
+  /*display: inline-block;*/
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f00c";
+  font-size: 25px;
+  position: absolute;
+  right: 0;
+  top: 30%;
+  opacity: 0;
+  background-color: #ffffff;
+  color: #99E2D0;
+  border-radius: 25px;
+  padding: 2px;
+  transform: rotate(-360deg);
+  transition-duration: 0.7s;
+  place-items: center;
+  z-index: 1;
+  width: 0;
+  overflow: hidden;
+}
+#carte .partie__choix__numero::after {
+  display: grid;
+  content: "space";
+  color: transparent;
+  background-color: #99E2D0;
+  position: absolute;
+  right: 0%;
+  top: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 0 25px 25px 0;
+  opacity: 0;
+  transition-duration: 0.9s;
+  overflow: hidden;
+}
+#carte .partie__choix__numero:hover p {
+  width: 80%;
+}
+#carte .partie__choix__numero:hover::before {
+  width: 35px;
+  opacity: 100%;
+  transform: rotate(0);
+  right: 5%;
+  /*display: grid;
+  place-items: center;*/
+}
+#carte .partie__choix__numero:hover::after {
+  opacity: 100%;
+  width: 20%;
 }
 #carte__btn {
   text-decoration: none;
@@ -348,6 +432,16 @@ footer a {
 #carte__btn:hover {
   opacity: 0.9;
   transform: scale(1.05);
+}
+
+@keyframes appearance {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
