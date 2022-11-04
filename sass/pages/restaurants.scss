@@ -163,7 +163,6 @@
                         padding: 2px;
                         transform: rotate(-360deg);
                         transition-duration: .7s;
-                        place-items: center;
                         z-index: 1;
                         width: 0;
                         overflow: hidden;
@@ -178,10 +177,11 @@
                         top: 0;
                         height: 100%;
                         width: 0;
-                        border-radius: 0 25px 25px 0;
                         opacity: 0;
                         transition-duration: .9s;
                         overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
                     }
                     &:hover{
                         & p{
@@ -198,6 +198,7 @@
                         &::after{
                             opacity: 100%;
                             width: 20%;
+                            border-radius: 0 25px 25px 0;
                         }
                         
                     }

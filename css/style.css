@@ -384,7 +384,6 @@ footer a {
   padding: 2px;
   transform: rotate(-360deg);
   transition-duration: 0.7s;
-  place-items: center;
   z-index: 1;
   width: 0;
   overflow: hidden;
@@ -399,10 +398,11 @@ footer a {
   top: 0;
   height: 100%;
   width: 0;
-  border-radius: 0 25px 25px 0;
   opacity: 0;
   transition-duration: 0.9s;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #carte .partie__choix__numero:hover p {
   width: 80%;
@@ -418,6 +418,7 @@ footer a {
 #carte .partie__choix__numero:hover::after {
   opacity: 100%;
   width: 20%;
+  border-radius: 0 25px 25px 0;
 }
 #carte__btn {
   text-decoration: none;
@@ -441,6 +442,74 @@ footer a {
   }
   100% {
     transform: translatey(0px);
+  }
+}
+.loader {
+  position: fixed;
+  background-color: #ffffff;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  animation: load 5s;
+  opacity: 0;
+  z-index: -1;
+}
+.loader__container {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #9356DC;
+  animation: spin 4s linear;
+  opacity: 0;
+}
+.loader__container::before, .loader__container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 10px solid transparent;
+}
+.loader__container::before {
+  width: 200px;
+  height: 200px;
+  border-bottom-color: #FF79DA;
+  animation: spin 4s linear;
+  opacity: 0;
+}
+.loader__container::after {
+  width: 150px;
+  height: 150px;
+  border-right-color: #99E2D0;
+  animation: spin 4s linear;
+  opacity: 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 100%;
+  }
+  100% {
+    transform: rotate(540deg);
+    opacity: 0%;
+  }
+}
+@keyframes load {
+  0% {
+    opacity: 100%;
+    z-index: 1;
+  }
+  90% {
+    opacity: 30%;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0%;
   }
 }
 

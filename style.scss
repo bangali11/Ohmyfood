@@ -6,4 +6,75 @@
 @use "./sass/layouts/menu.scss";
 @use "./sass/layouts/_footer";
 @use"./sass/utils/variables.scss";
+@use"./sass/utils/colors.scss";
 @use"./sass/pages/restaurants.scss";
+
+.loader{
+    position: fixed;
+    background-color: colors.$White;
+    opacity: .9;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    animation: load 5s;
+    opacity: 0;
+    z-index: -1;
+    &__container{
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 10px solid transparent;
+        border-top-color: colors.$Primaire;
+        animation: spin 4s linear;
+        opacity: 0;
+        &::before, &::after{
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            border: 10px solid transparent;
+        }
+        &::before{
+            width: 200px;
+            height: 200px;
+            border-bottom-color: colors.$Secondaire;
+            animation: spin 4s linear;
+            opacity: 0;
+        }
+        &::after{
+            width: 150px;
+            height: 150px;
+            border-right-color: colors.$Tertiaire;
+            animation: spin 4s linear;
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+        opacity: 100%;
+    }
+    100% {
+        transform: rotate(540deg);
+        opacity: 0%;
+    }
+}
+
+@keyframes load{
+    0% {
+        opacity: 100%;
+        z-index: 1;
+    }
+    90% {
+        opacity: 30%;
+        z-index: 1;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
