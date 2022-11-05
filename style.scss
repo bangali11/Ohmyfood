@@ -17,7 +17,7 @@
     width: 100%;
     display: grid;
     place-items: center;
-    animation: load 5s;
+    animation: load 3s;
     opacity: 0;
     z-index: -1;
     &__container{
@@ -29,7 +29,7 @@
         border-radius: 50%;
         border: 10px solid transparent;
         border-top-color: colors.$Primaire;
-        animation: spin 4s linear;
+        animation: spin 3s linear;
         opacity: 0;
         &::before, &::after{
             content: "";
@@ -41,14 +41,14 @@
             width: 200px;
             height: 200px;
             border-bottom-color: colors.$Secondaire;
-            animation: spin 4s linear;
+            animation: spin 3s linear;
             opacity: 0;
         }
         &::after{
             width: 150px;
             height: 150px;
             border-right-color: colors.$Tertiaire;
-            animation: spin 4s linear;
+            animation: spin 3s linear;
             opacity: 0;
         }
     }
@@ -71,7 +71,7 @@
         z-index: 1;
     }
     90% {
-        opacity: 30%;
+        opacity: 50%;
         z-index: 1;
     }
     100% {
