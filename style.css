@@ -1,0 +1,569 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+}
+
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 2px 6px 9px -5px rgba(22, 21, 21, 0.31);
+  position: relative;
+}
+
+.city {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  font-weight: bold;
+  gap: 10px;
+}
+
+.explorer {
+  background-color: #fafafa;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 20px;
+}
+.explorer__btn {
+  text-decoration: none;
+  color: #ffffff;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  padding: 15px 30px;
+  border-radius: 25px;
+  box-shadow: 2px 6px 9px -5px rgba(22, 21, 21, 0.31);
+  transition-duration: 0.25s;
+  margin-bottom: 30px;
+}
+.explorer__btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 15px 45px 30px;
+}
+.fonctionnement #conteur {
+  counter-set: conteur-counter;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+}
+.fonctionnement .etapes {
+  position: relative;
+  background-color: #fafafa;
+  padding: 25px 0px;
+  border-radius: 20px;
+  display: flex;
+  gap: 0.5rem;
+  counter-reset: steps;
+  box-shadow: 2px 6px 9px -5px rgba(22, 21, 21, 0.31);
+  max-width: 370px;
+  justify-content: center;
+  color: #000000;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+}
+.fonctionnement .etapes::before {
+  counter-increment: conteur-counter;
+  content: counter(conteur-counter);
+  position: absolute;
+  left: -10px;
+  background-color: #9356DC;
+  border-radius: 10px;
+  color: white;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+}
+.fonctionnement .etapes:hover {
+  background-color: rgba(147, 86, 220, 0.1098039216);
+}
+.fonctionnement .etapes:hover i {
+  color: #9356DC;
+}
+.fonctionnement .etapes i {
+  color: #000000;
+  opacity: 0.5;
+  position: absolute;
+  left: 35px;
+}
+
+#menu {
+  background-color: #fafafa;
+  width: 100%;
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#menu h2 {
+  width: 100%;
+}
+#menu__card {
+  width: 100%;
+  max-width: 2000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+#menu__card a {
+  width: 100%;
+  max-width: 450px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  position: relative;
+}
+#menu__card a .nouveau::before {
+  content: "Nouveau";
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  background-color: #99E2D0;
+  right: 20px;
+  top: 20px;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  font-weight: 400;
+}
+#menu__card a .card {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  box-shadow: 2px 6px 9px -5px rgba(22, 21, 21, 0.31);
+}
+#menu__card a .card__img {
+  border-radius: 25px;
+  width: 100%;
+  height: 70%;
+}
+#menu__card a .card__img img {
+  border-radius: 25px 25px 0 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#menu__card a .card__desc {
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #000000;
+  gap: 5px;
+  padding: 10px;
+  width: 100%;
+  height: 30%;
+  border-radius: 0 0 25px 25px;
+}
+#menu__card a .card__desc .fa-regular {
+  position: absolute;
+  right: 30px;
+  transition-duration: 0.25s;
+  cursor: pointer;
+}
+#menu__card a .card__desc .fa-regular:hover {
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transform: scale(1.05);
+  font-weight: 600;
+}
+
+footer {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #ffffff;
+  opacity: 0.8;
+  background-color: #000000;
+}
+footer h4 {
+  margin-bottom: 10px;
+  font-family: "Shrikhand", cursive;
+}
+footer a {
+  display: flex;
+  gap: 10px;
+  color: inherit;
+}
+
+/*KEYFRAMES*/
+/*Appariton des cards du menu*/
+@-webkit-keyframes appearance {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+@keyframes appearance {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+/*loader de la page*/
+@-webkit-keyframes load {
+  0% {
+    opacity: 100%;
+    z-index: 1;
+  }
+  90% {
+    opacity: 50%;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes load {
+  0% {
+    opacity: 100%;
+    z-index: 1;
+  }
+  90% {
+    opacity: 50%;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+/*La rotation des cercle du loader*/
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 100%;
+  }
+  100% {
+    transform: rotate(540deg);
+    opacity: 0%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 100%;
+  }
+  100% {
+    transform: rotate(540deg);
+    opacity: 0%;
+  }
+}
+#banner {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+#banner a {
+  color: inherit;
+}
+#banner a::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  /*-webkit-font-smoothing: antialiased;*/
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  position: absolute;
+  left: 5%;
+  top: -65px;
+  font-size: 25px;
+  opacity: 0.8;
+}
+#banner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#carte {
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  min-height: 600px;
+  background-color: #f3f3f3;
+  position: relative;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 15px;
+  gap: 20px;
+}
+#carte h2 {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#carte h2 .fa-regular {
+  position: absolute;
+  right: 30px;
+  transition-duration: 0.25s;
+}
+#carte h2 .fa-regular:hover {
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transform: scale(1.05);
+  font-weight: 600;
+  cursor: pointer;
+}
+#carte__menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px 50px;
+}
+#carte .partie {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  height: auto;
+}
+#carte .partie > span {
+  position: relative;
+}
+#carte .partie > span::before {
+  content: "space";
+  position: absolute;
+  top: 20px;
+  background-color: #99E2D0;
+  width: 40px;
+  height: 3px;
+  color: transparent;
+}
+#carte .partie__choix {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#carte .partie__choix__numero {
+  background-color: #ffffff;
+  width: 100%;
+  min-height: 70px;
+  height: 70px;
+  max-height: 70px;
+  border-radius: 25px;
+  box-shadow: 2px 6px 9px -5px rgba(22, 21, 21, 0.31);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  -webkit-animation: appearance 1s;
+          animation: appearance 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  overflow: hidden;
+}
+#carte .partie__choix__numero:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+#carte .partie__choix__numero:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+#carte .partie__choix__numero:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+#carte .partie__choix__numero:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+#carte .partie__choix__numero h4 {
+  width: 100%;
+  height: 50%;
+  padding-right: 15%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#carte .partie__choix__numero p {
+  height: 50%;
+  min-width: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transition-duration: 0.8s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+#carte .partie__choix__numero p i {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 90%;
+  flex-shrink: 1;
+}
+#carte .partie__choix__numero p span:nth-child(1) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#carte .partie__choix__numero::before {
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  /*-webkit-font-smoothing: antialiased;*/
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f00c";
+  font-size: 25px;
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  background-color: #ffffff;
+  color: #99E2D0;
+  border-radius: 25px;
+  padding: 2px;
+  transform: rotate(-360deg);
+  transition-duration: 0.9s;
+  z-index: 1;
+  margin-right: -20%;
+  width: 10%;
+  height: 50%;
+}
+#carte .partie__choix__numero::after {
+  display: grid;
+  content: "space";
+  color: transparent;
+  background-color: #99E2D0;
+  position: absolute;
+  right: 0%;
+  top: 0;
+  height: 100%;
+  transition-duration: 0.9s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: -20%;
+  width: 20%;
+}
+#carte .partie__choix__numero:hover p {
+  width: 80%;
+}
+#carte .partie__choix__numero:hover::before {
+  opacity: 100%;
+  transform: rotate(0);
+  right: 5%;
+  margin-right: 0;
+}
+#carte .partie__choix__numero:hover::after {
+  opacity: 100%;
+  width: 20%;
+  border-radius: 0 25px 25px 0;
+  margin-right: 0;
+}
+#carte__btn {
+  text-decoration: none;
+  color: #ffffff;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  padding: 15px 55px;
+  border-radius: 25px;
+  box-shadow: 2px 6px 9px -5px rgba(22, 21, 21, 0.31);
+  transition-duration: 0.25s;
+  margin-bottom: 30px;
+}
+#carte__btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.loader {
+  position: fixed;
+  background-color: #ffffff;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  -webkit-animation: load 3s;
+          animation: load 3s;
+  opacity: 0;
+  z-index: -1;
+}
+.loader__container {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #9356DC;
+  -webkit-animation: spin 3s linear;
+          animation: spin 3s linear;
+  opacity: 0;
+}
+.loader__container::before, .loader__container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 10px solid transparent;
+}
+.loader__container::before {
+  width: 200px;
+  height: 200px;
+  border-bottom-color: #FF79DA;
+  -webkit-animation: spin 3s linear;
+          animation: spin 3s linear;
+  opacity: 0;
+}
+.loader__container::after {
+  width: 150px;
+  height: 150px;
+  border-right-color: #99E2D0;
+  -webkit-animation: spin 3s linear;
+          animation: spin 3s linear;
+  opacity: 0;
+}/*# sourceMappingURL=style.css.map */

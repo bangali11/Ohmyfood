@@ -1,0 +1,68 @@
+/*KEYFRAMES*/
+/*Appariton des cards du menu*/
+@-webkit-keyframes appearance {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+@keyframes appearance {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+/*loader de la page*/
+@-webkit-keyframes load {
+  0% {
+    opacity: 100%;
+    z-index: 1;
+  }
+  90% {
+    opacity: 50%;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes load {
+  0% {
+    opacity: 100%;
+    z-index: 1;
+  }
+  90% {
+    opacity: 50%;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+/*La rotation des cercle du loader*/
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 100%;
+  }
+  100% {
+    transform: rotate(540deg);
+    opacity: 0%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 100%;
+  }
+  100% {
+    transform: rotate(540deg);
+    opacity: 0%;
+  }
+}/*# sourceMappingURL=animations.css.map */
