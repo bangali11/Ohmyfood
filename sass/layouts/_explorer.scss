@@ -11,17 +11,6 @@
     padding: 15px;
     gap: 20px;
     &__btn {
-      text-decoration: none;
-      color: #ffffff;
-      @include mixins.base_gradient;
-      padding: 15px 30px;
-      border-radius: 25px;
-      @include mixins.base_box-shadow;
-      @include mixins.base_transition-duration;
-      margin-bottom: 30px;
+      @include mixins.btn_transform();
     }
-    &__btn:hover {
-      opacity: 0.9;
-      @include mixins.base_transform-zoom;
-    } 
 }

@@ -75,7 +75,6 @@
                         cursor: pointer;
                         &:hover{
                             @include mixins.base_gradient;
-                            /*-webkit-background-clip: text;*/
                             background-clip: text;
                             color: transparent;
                             @include mixins.base_transform-zoom;

@@ -13,7 +13,7 @@
             font-style: normal;
             font-variant: normal;
             text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
+            /*-webkit-font-smoothing: antialiased;*/
             font-family: "Font Awesome 5 Free";
             font-weight: 900; 
             content: "\f060";
@@ -56,7 +56,6 @@
             @include mixins.base_transition-duration;
             &:hover{
                 @include mixins.base_gradient;
-                /*-webkit-background-clip: text;*/
                 background-clip: text;
                 color: transparent;
                 @include mixins.base_transform-zoom;
@@ -154,7 +153,7 @@
                         font-style: normal;
                         font-variant: normal;
                         text-rendering: auto;
-                        -webkit-font-smoothing: antialiased;
+                        /*-webkit-font-smoothing: antialiased;*/
                         font-family: "Font Awesome 5 Free";
                         font-weight: 600;
                         content: "\f00c";
@@ -212,36 +211,6 @@
         }
     
     &__btn {
-        text-decoration: none;
-        color: #ffffff;
-        @include mixins.base_gradient;
-        padding: 15px 55px;
-        border-radius: 25px;
-        @include mixins.base_box-shadow;
-        @include mixins.base_transition-duration;
-        margin-bottom: 30px;
-        &:hover {
-            opacity: 0.9;
-            @include mixins.base_transform-zoom;
-          }
+        @include mixins.btn_transform(55px);
       }
-    }
-    
-/*TEST
-    .test{
-        height: 100%;
-        flex: 1;
-        &:hover ~ .test2{
-            margin-right: -1rem;
-        }
-    }
-    .test2{
-        background-color: #99e2d0;
-        margin: -1rem -5rem -1rem 1rem;
-        width: 4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition-duration: .5s;
-    }
-    */
+}

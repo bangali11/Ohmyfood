@@ -16,3 +16,18 @@
 @mixin base_transform-zoom($zoom:1.05){
     transform: scale($zoom);
 }
+
+@mixin btn_transform($pr:30px){
+    text-decoration: none;
+    color: #ffffff;
+    @include base_gradient;
+    padding: 15px $pr;
+    border-radius: 25px;
+    @include base_box-shadow;
+    @include base_transition-duration;
+    margin-bottom: 30px;
+    &:hover {
+        opacity: 0.9;
+        @include base_transform-zoom;
+      }
+}
